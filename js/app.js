@@ -26,3 +26,19 @@ function closeMenu() {
     navMenu.classList.remove("active");
     navSocials.classList.remove("active");
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos < currentScrollPos) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        navSocials.classList.remove("active");
+    } 
+//     else {
+//     hamburger.classList.remove("active");
+//     navMenu.classList.remove("active");
+//     navSocials.classList.remove("active");
+// }
+    prevScrollpos = currentScrollPos;
+}
